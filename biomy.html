@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biomy w Don't Starve Together</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Site-logo.webp">
+</head>
+<body>
+    <nav class="menu">
+        <div class="dropdown">
+           <a href="#"> Menu</a>
+           <ul>
+              <li><a href="postacie.html">Postacie</a></li>
+              <li><a href="strona.html">Bossy</a></li>
+              <li><a href="Start.html">Strona główna</a></li>
+              <li><a href="rok.html">Pory roku</a></li>
+           </ul>
+        </div>
+     </nav>
+<header style="text-align: center;">
+    <h1>Biomy w Don't Starve Together</h1>
+    <p>W grze Don't Starve Together znajdziesz różnorodne biomy, z których każdy oferuje inne zasoby, wyzwania oraz niebezpieczeństwa. Poznaj charakterystykę każdego z nich!</p>
+</header>
+
+<div style="text-align: center;">
+  
+
+    <figure>
+        <button class="nav-arrow nav-left" onclick="prevImage()">&#10094;</button>
+        <img id="gallery-image" class="gallery-image" src="dstbiom.webp" alt="Galeria zdjęć">
+        <button class="nav-arrow nav-right" onclick="nextImage()">&#10095;</button>
+        <p></p>
+        <figcaption id="caption"></figcaption>
+     
+    </figure>
+
+    
+</div>
+
+<script>
+    const images = [
+        { src: "Grassland_Icon.webp", caption: "Łąki są powszechnym biomem występującym na świecie. Są to na ogół bezpieczne obszary z wieloma rodzajami przydatnych zasobów. Gracz zawsze pojawia się na łące po wejściu do świata, niezależnie od tego, czy jest to mały, zygzakowaty skrawek zieleni, czy cały biom. Łąki często mieszają się z obszarami leśnymi i sporadycznie bagiennymi." },
+        { src: "Forest_Icon.webp", caption: "Las to biom wyznaczony przez ciemnozieloną ziemię. Oprócz drzew można znaleźć głazy, groby i legowiska pająków." },
+        { src: "Graveyard_map.webp", caption: "Cmentarz znajduje się w jednym z obszarów lasu na biomie mozaikowym świata lub w ruinach biomu labiryntu z warstwą mgły pokrywającą ziemię. Zawiera liczne groby, a na ziemi często leżą bryłki złota. W tym biomie znajduje się kilka drzew i czasami kilka głazów." },
+        { src: "Marsh_Icon.webp", caption: "Bagna są uważane za najbardziej niebezpieczne i niegościnne ze wszystkich Biomów ze względu na ich rodzime Macki, które atakują bez prowokacji, oraz Mermy, które choć są wrogie tylko z bliskiej odległości. Pajęcze Nory pojawiają się często na Bagnach, co zwykle prowadzi do konfrontacji z innymi Mobami. W rezultacie gracze mogą zabrać mnóstwo łupów po zakończeniu wojen." },
+        { src: "Mosaic_Icon.webp", caption: "Biomy mozaikowe są zazwyczaj ograniczone do jednego na mapę i zawierają losową mozaikę wszystkich innych biomów w obrębie nich. Cechą charakterystyczną biomu mozaikowego jest obecność jezior, mających kształt okrągły lub inny niejasny wielokąt." },
+        { src: "Rockland_Icon.webp", caption: "Na terenach skalistych rośnie zwykle niewiele roślin, chociaż od czasu do czasu na krawędziach mogą zakraść się wiecznie zielone drzewa, drzewka lub kępki trawy." },
+        { src: "Savanna_Icon.webp", caption: "Sawanna to biom bogaty w trawę i moby, ale zawierający niewielką ilość flory. To jedyny biom, w którym rozmnażają się bawoły, ale jest także domem dla wielu królików, czerwonych ptaków i wron." },
+        { src: "Desert_Icon.webp", caption: "Pustynny biom. Powszechnie spotykane w tym biomie są kopce psów, chwasty, kaktusy, myszołowy i głazy. Sporadycznie występują tu kolczaste drzewa, kolczaste krzewy i kępy trawy. W każdym biomie pustynnym znajduje się zazwyczaj stado kóz Volt. Pustynia jest w większości pokryta piaszczystą murawą, choć występują na niej również duże połacie gołej ziemi." },
+        { src: "Deciduous_Icon.webp", caption: "Las Liściasty lub Las jesienny. Jest on bardzo podobny do zwykłego biomu leśnego, z tym wyjątkiem, że wszystkie drzewa to orzechy brzozowe, które produkują orzechy brzozowe, a ziemia pokryta jest trawą liściastą. W Lesie Liściastym pojawia się także wyłącznie Posąg Glommera, który rodzi Glommera, oraz Wydrążone Pnie, zamieszkane przez Koty." }
+    ];
+
+    let currentImageIndex = 0;
+
+    function prevImage() {
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        updateImage();
+    }
+
+    function nextImage() {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        updateImage();
+    }
+
+    function updateImage() {
+        const image = images[currentImageIndex];
+        document.getElementById('gallery-image').src = image.src;
+        document.getElementById('caption').textContent = image.caption;
+    }
+</script>
+</body>
+</html>

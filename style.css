@@ -1,0 +1,196 @@
+#z:hover {
+    -o-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -webkit-transition: all 0.6s;
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    }
+
+body{
+    background-image:url(https://images3.alphacoders.com/137/1372011.jpeg); background-position:50% 50%;
+background-attachment:fixed; background-repeat:no-repeat; background-size: cover;
+}
+
+table, th, td
+{
+  border-collapse:collapse;
+  border:5px ridge rgb(0, 0, 0);
+  padding:5px;
+}
+body {
+    color: white;
+}
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 3rem;
+    background-color: hsl(0, 41%, 19%);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 7px;
+    font-size: x-large;
+}
+.menu a {
+    margin: 0 1rem;
+    text-decoration: none;
+    padding: 1rem .5rem;
+}
+.dropdown {
+    position: relative;
+}
+.dropdown ul {
+    width: 200px;
+    text-align: center;
+    position: absolute;
+    background-color: #878f8d;
+    padding: 0;
+    list-style-type: none;
+    box-shadow: 0px 0px 23px 0px rgb(0,0,0,0.25);
+    margin-top: 10px;
+    border-radius: 7px;
+    display: none;
+}
+.dropdown ul li {
+    padding: .5rem;
+}
+.dropdown ul li:hover {
+    background: #424349;
+    border-radius: 7px;
+}
+.dropdown ul li a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+.dropdown a:focus + ul,
+.dropdown a:hover + ul, 
+.dropdown ul:hover {
+    display: block;
+}
+a {
+    color: white;
+}
+h1 {
+    color: aliceblue;
+
+}
+details {
+    border: solid thin #461d1d; padding: 10px; width: 500px;
+    font-weight: bold;
+    color: aliceblue;
+    border:5px ridge #461d1d;
+    padding:5px;
+}
+#a {
+    height: 40px;
+    width: 40px;;
+}
+#b {
+    width: 100px;
+    height: 130px;
+}
+#c{
+    width: 23px;
+    height: 28px;
+}
+#d {
+    display: flex;
+}
+h1{
+    text-align: center;
+}
+#e {
+    display: flex;
+    margin-left: 8%;
+}
+
+#w {
+    width: 100px;
+    height: 100px;
+}
+
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+header nav {
+    margin-top: 10px;
+}
+header nav a {
+    color: #f4f4f4;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+header nav a:hover {
+    color: #461d1d;
+}
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #461d1d;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.cta-button:hover {
+    background-color: #4e4847;
+}
+.main-content {
+    text-align: center;
+    padding: 50px 10%;
+}
+.main-content h2 {
+    font-size: 28px;
+}
+.main-content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+.offer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+.offer-item {
+    background-color: #461d1d;
+    padding: 30px;
+    border-radius: 8px;
+    width: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.offer-item h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+figcaption {
+    background-color: #461d1d;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+
+figure {
+    margin: 20px;
+    padding: 0;
+    text-align: center;
+}
+.pora {
+    background-color: #461d1d;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }

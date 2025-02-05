@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biomy w Don't Starve Together</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="menu">
+        <div class="dropdown">
+           <a href="#"> Menu</a>
+           <ul>
+              <li><a href="postacie.html">Postacie</a></li>
+              <li><a href="strona.html">Bossy</a></li>
+              <li><a href="Start.html">Strona główna</a></li>
+           </ul>
+        </div>
+     </nav>
+<header style="text-align: center;">
+    <h1>Biomy w Don't Starve Together</h1>
+    <p>W grze Don't Starve Together znajdziesz różnorodne biomy, z których każdy oferuje inne zasoby, wyzwania oraz niebezpieczeństwa. Poznaj charakterystykę każdego z nich!</p>
+</header>
+
+<div style="text-align: center;">
+    <button class="nav-arrow nav-left" onclick="prevImage()">&#10094;</button>
+
+    <!-- Element <figure> zawierający obrazek oraz podpis -->
+    <figure>
+        <img id="gallery-image" class="gallery-image" src="Grassland_Icon.webp" alt="Galeria zdjęć">
+        <figcaption id="caption">Grassland</figcaption>
+    </figure>
+
+    <button class="nav-arrow nav-right" onclick="nextImage()">&#10095;</button>
+</div>
+
+<script>
+    // Tablica obiektów zawierająca zarówno obrazy jak i podpisy
+    const images = [
+        { src: "Grassland_Icon.webp", caption: "Grassland" },
+        { src: "Forest_Icon.webp", caption: "Forest" },
+        { src: "Graveyard_map.webp", caption: "Graveyard" },
+        { src: "Marsh_Icon.webp", caption: "Marsh" },
+        { src: "Mosaic_Icon.webp", caption: "Mosaic" },
+        { src: "Rockland_Icon.webp", caption: "Rockland" },
+        { src: "Savanna_Icon.webp", caption: "Savanna" },
+        { src: "Desert_Icon.webp", caption: "Desert" },
+        { src: "Deciduous_Icon.webp", caption: "Deciduous" }
+    ];
+
+    let currentImageIndex = 0;
+
+    // Funkcja zmieniająca obrazek i podpis na poprzedni
+    function prevImage() {
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        updateImage();
+    }
+
+    // Funkcja zmieniająca obrazek i podpis na następny
+    function nextImage() {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        updateImage();
+    }
+
+    // Funkcja do aktualizacji obrazu i podpisu
+    function updateImage() {
+        const image = images[currentImageIndex];
+        document.getElementById('gallery-image').src = image.src;
+        document.getElementById('caption').textContent = image.caption;
+    }
+</script>
+</body>
+</html>
